@@ -54,6 +54,12 @@ with app.app_context():
 
 # Rutas de la API
 
+#ruta raiz
+@app.route('/')
+def home():
+    return jsonify({'message': '¡El servidor está funcionando correctamente!'})
+
+
 # Crear un usuario
 @app.route('/usuarios', methods=['POST'])
 def crear_usuario():
